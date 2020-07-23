@@ -6,8 +6,8 @@ const routes = new Router();
 
 routes.use(cors());
 
-routes.post('/delivery', ShippingController.create);
-routes.get('/delivery', ShippingController.list);
-routes.get('/delivery/:id', ShippingController.get);
+routes.post('/shipping', ShippingController.create);
+routes.get('/shipping', ShippingController.list);
+routes.get('/shipping/:id', ShippingController.get);
 
 export default routes;
