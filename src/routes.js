@@ -1,13 +1,11 @@
 import { Router } from 'express';
-import cors from 'cors';
-import ShippingController from './app/controllers/ShippingController';
+import DeliveryController from './app/controllers/DeliveryController';
 
 const routes = new Router();
 
-routes.use(cors());
-
-routes.post('/shipping', ShippingController.create);
-routes.get('/shipping', ShippingController.list);
-routes.get('/shipping/:id', ShippingController.get);
+routes.post('/delivery', DeliveryController.create);
+routes.get('/delivery', DeliveryController.list);
+routes.get('/delivery/:id', DeliveryController.get);
+routes.delete('/delivery/:id', DeliveryController.delete);
 
 export default routes;

@@ -1,8 +1,8 @@
 import Sequelize from 'sequelize';
-import Shipping from '../app/models/Shipping';
+import Delivery from '../app/models/Delivery';
 import config from '../config/database';
 
-const models = [Shipping];
+const models = [Delivery];
 
 class Database {
   constructor() {
