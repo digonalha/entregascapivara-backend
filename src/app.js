@@ -11,9 +11,16 @@ class App {
   }
 
   middlewares() {
+    var corsOptions = {
+      origin: 'https://entregas-capivara-frontend.herokuapp.com/',
+      optionsSuccessStatus: 200
+    }
+    
     this.server.use(express.json());
-    this.server.use(cors);
+    this.server.use(cors(corsOptions));
   }
+  
+
 
   routes() {
     this.server.use(routes);
