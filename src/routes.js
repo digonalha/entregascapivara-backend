@@ -6,7 +6,7 @@ const routes = new Router();
 routes.use((req, res, next) => {
   res.header(
     'Access-Control-Allow-Origin',
-    'https://entregas-capivara-frontend.herokuapp.com/'
+    'https://entregas-capivara-frontend.herokuapp.com'
   );
   res.header(
     'Access-Control-Allow-Headers',
