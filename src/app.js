@@ -12,7 +12,7 @@ class App {
 
   middlewares() {
     var corsOptions = {
-      origin: 'https://entregas-capivara-frontend.herokuapp.com/',
+      origin: 'entregas-capivara-frontend.herokuapp.com',
       optionsSuccessStatus: 200
     }
     
