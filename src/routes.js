@@ -4,10 +4,7 @@ import DeliveryController from './app/controllers/DeliveryController';
 const routes = new Router();
 
 routes.use((req, res, next) => {
-  res.header(
-    'Access-Control-Allow-Origin',
-    'https://entregas-capivara-frontend.herokuapp.com'
-  );
+  res.header('Access-Control-Allow-Origin', process.env.ALLOW_ORIGIN);
   res.header(
     'Access-Control-Allow-Headers',
     'Origin, X-Requested-With, Content-Type, Accept'

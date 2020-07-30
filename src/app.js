@@ -3,6 +3,8 @@ import cors from 'cors';
 import routes from './routes';
 import './database';
 
+require('dotenv/config');
+
 class App {
   constructor() {
     this.server = express();
@@ -12,7 +14,7 @@ class App {
 
   middlewares() {
     const corsOptions = {
-      origin: 'https://entregas-capivara-frontend.herokuapp.com',
+      origin: process.env.ALLOW_ORIGIN,
       optionsSuccessStatus: 200,
     };
 
