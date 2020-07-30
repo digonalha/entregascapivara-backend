@@ -10,7 +10,10 @@ class DeliveryController {
         ponto_destino,
       } = req.body;
 
-      // validacoes
+      if (ponto_destino === ponto_partida)
+        return res
+          .status(400)
+          .json({ error: 'Ponto de partida e destino sao iguais.' });
 
       const delivery = await Delivery.create({
         nome_cliente,
