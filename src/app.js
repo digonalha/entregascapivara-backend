@@ -1,6 +1,6 @@
 import express from 'express';
+import cors from 'cors';
 import routes from './routes';
-import cors from 'cors'; 
 import './database';
 
 class App {
@@ -11,16 +11,14 @@ class App {
   }
 
   middlewares() {
-    var corsOptions = {
+    const corsOptions = {
       origin: 'https://entregas-capivara-frontend.herokuapp.com',
-      optionsSuccessStatus: 200
-    }
-    
+      optionsSuccessStatus: 200,
+    };
+
     this.server.use(express.json());
     this.server.use(cors(corsOptions));
   }
-  
-
 
   routes() {
     this.server.use(routes);

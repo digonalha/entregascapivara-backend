@@ -1,9 +1,14 @@
+require('dotenv/config');
+
 module.exports = {
-  dialect: 'sqlite',
-  storage: './src/database/db.sqlite',
+  dialect: 'postgres',
+  host: process.env.DB_HOST,
+  username: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
   define: {
-    timestamps: true, // armazena a data da criação e edição de cada registro
-    underscored: true, // transforma os camelCase em snake_case
+    timestamps: true,
+    underscored: true,
     underscoredAll: true,
   },
 };
