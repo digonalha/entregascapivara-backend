@@ -7,10 +7,6 @@ module.exports = {
         autoIncrement: true,
         primaryKey: true,
       },
-      descricao: {
-        type: Sequelize.STRING,
-        allowNull: false,
-      },
       nome_cliente: {
         type: Sequelize.STRING,
         allowNull: false,
